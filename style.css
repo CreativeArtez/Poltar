@@ -1,0 +1,967 @@
+:root{
+     --pr-color: #fff ;
+     --second-color:#0a0a0a;
+     --cubicbz: cubic-bezier(.9,0,.1,1);
+     --fz-big:60px;
+     --gap: 150px;
+     --indent: 50px;
+	--indent2: 100px;
+}
+*{
+     box-sizing: border-box;
+     font-family: 'syne',sans-serif;
+     font-weight: 800;
+     margin: 0;
+     padding: 0;
+     font-feature-settings: 'pnum' on,'lnum on';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+     overflow-x: hidden ;
+     display: block;
+}
+
+
+/* untuk mengedit scrollbar*/
+::-webkit-scrollbar{
+     width: 0px;
+}
+
+::-webkit-scrollbar-thumb{
+     background: linear-gradient(2deg,#919191,#424141);
+    
+}
+body{
+     background: var(--second-color);
+     display: block;
+}
+
+/*untuk upper button*/
+.upper-tombol{
+     width: 60px;
+     height: 95px;
+     position: fixed;
+     right: 10px;
+     bottom: 20%;
+     z-index: 2;
+}
+.arrow{
+     margin: auto;
+     width: 90%;
+     height: 80%;
+
+
+}
+.hitam,.putih{
+     margin: auto;
+     width: 70%;
+     height: 30%;
+     background: white;
+     clip-path: polygon(100% 48%, 100% 100%, 49% 65%, 0 100%, 0% 50%, 50% 0);
+}
+.am{
+     animation: am 3s linear infinite ;
+}
+@keyframes am{
+     0%,100%{
+
+     }
+     50%{
+          background-color: grey;
+     }
+}
+
+.putih{
+     background: white;
+     animation: putih 2s 1s linear infinite;
+}
+@keyframes putih{
+     0%,100%{
+
+     }
+     50%{
+          background-color: grey;
+     }
+}
+.amm{
+     animation:  amm 2s 1.5s linear infinite;
+}
+@keyframes amm {
+     0%,100%{
+
+     }
+      50%{
+          background: gray;
+     }
+}
+
+.upper-tombol h1{
+     text-decoration: none !important;
+     color: white;
+     font-size: 1em;
+     text-align: center;
+}
+
+
+/*untuk section pertama header*/
+.header{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'syne',sans-serif;
+
+}
+.char{
+     display: inline-block;
+}
+.title,.titles{
+     margin: 0;
+     font-size: 4rem;
+     text-align: center;
+     color: white;
+     text-transform: uppercase;
+     mix-blend-mode: difference;
+     
+}
+.title .stroke ,.struk{
+     color: transparent;
+     display: inline-block;
+     -webkit-text-stroke: 1px var(--pr-color);
+}
+.header_img{
+
+     position: absolute;
+     width: 30%;
+     height: 100vh;
+     top: 0;
+     right: 200px;
+     clip-path: polygon(0% 0%,0% 0%,0% 100%,0% 100%);
+     overflow: hidden;
+     z-index: -1;
+}
+.header_img img{
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+}
+
+
+/* untuk marquee*/
+.header-marque{
+     left: 0;
+     width: 100%;
+     height: auto;
+     background: #1c1a1a;
+     overflow: hidden;
+}
+.marque-txt{
+     display: flex;
+     width: 100%;
+     height: auto;
+     padding: 8px 70px;
+}
+.marque-texs{
+     position: relative;
+     flex: 0 0 auto;
+     display: inline-block;
+     padding-right: 55px;
+     margin-right: 15px;
+     text-transform: uppercase;
+     color: var(--pr-color);
+     color: #9e9e9e;
+     font-size: 35px ;
+}
+.marq-star{
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     right: 0;
+}
+.marq-star img{
+     display: block;
+     width: 100%;
+     height: 100%;
+}
+.titlegsap{
+     display: inline-block;
+	will-change: transform;
+}
+
+
+
+/* untuk teks*/
+
+.three-object{
+     top: 0;
+     left: 0;
+     position: absolute;
+     width: 100%;
+     height: 100vh;
+     object-fit: cover;
+     display: flex;
+}
+iframe{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+}
+.penutup-logo{
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     width: 170px;
+     height: 70px;
+     background-color: #0a0a0a;
+     position: absolute;
+     z-index: 1;
+}
+.teks-only{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     
+}
+
+.teks{
+     margin: auto;
+     position: relative;
+     display: flex;
+     height: auto;
+     width: 70%;
+   
+}
+.sink{
+     margin: auto;
+     text-align: center;
+     color: #fff;
+}   
+   
+
+/* untuk section image dengan pop up*/
+.kartu{
+     margin: auto;
+   
+}
+
+.two{
+     margin-top: 200px;
+}
+.image-only{
+     width: 100%;
+     height: auto;
+     display: block;
+    
+}
+.textanim_title{
+     margin-top: 150px;
+     min-height:55px ;
+     font-size: 3em;
+     color: var(--pr-color);
+     text-align: right;
+     text-transform: uppercase;
+     overflow: hidden;
+    
+     
+}
+.textanim_title .stroke{
+     color: transparent;
+     -webkit-text-stroke: 1px var(--pr-color);
+}
+
+
+.kelas-kartu{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: auto;
+     height: auto;
+     position: relative;
+    
+}
+.card-img{
+     position: relative;
+     width: 450px;
+     height: 650px;
+     cursor: pointer;
+     object-fit: cover;
+    margin: auto;
+     clip-path: polygon(0% 0%,0% 0%,0% 100%,0% 100%);
+     
+}
+.card-images{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     position: absolute;
+     z-index: -1;
+     top: 0;
+    display: none;
+     left: 0;
+     scale: 0.5;
+}
+.card-text{
+     position: absolute;
+     font-size: var(--fz-big) ;
+     scale: 0.8;
+     color: transparent;
+     -webkit-text-stroke: 1px white;
+     mix-blend-mode: difference;
+     transform: translate(20px);
+     opacity: 0;
+     z-index: 50;
+     transition:  1.3s var(--cubicbz);
+     
+}
+.card-img:hover .card-text{
+     transform: translateY(0);
+     opacity: 1;
+}
+.circle{
+     position: absolute;
+     width: 260px;
+     height: 260px;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+     z-index: 10;
+     bottom: 10%;
+     right: -25%;
+     mix-blend-mode: difference;
+    
+}
+.text,.texts,.textss,.textsss{
+     mix-blend-mode: difference;
+     position: relative;
+     margin: auto;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     right: 0;
+     clip-path: none;
+   
+   
+}
+.text span,.texts span,.textss span,.textsss span{
+     mix-blend-mode: difference;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     font-size: 1.8em;
+     transform-origin:0 130px ;
+     font-family: 'VT323', monospace;
+     color: #fff;
+     clip-path: none;
+ 
+}
+
+/* pop-up berada penjelasan */
+.popupContainer {
+     position: fixed;
+     z-index: 2000;
+     display: none;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+     background-color: #000;
+ }
+ 
+ .popupContent {
+     background: #424141;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     clip-path: polygon(0% 0%,0% 0%,0% 100%,0% 100%);
+ }
+
+ .popup-img{
+     width: 50%;
+     height: 100%;
+     object-fit: cover;
+     position: relative;
+     z-index: -1;
+ }
+ .popup-img-img{
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: 100;
+ }
+.popup-text{
+     width: 45%;
+     height: 100%;
+     display: flex;
+     z-index: 1;
+     
+}
+.popup-textt{
+     width: 90%;
+     height: 80%;
+     margin: auto;
+}
+.konxol{
+     color: transparent;
+     font-size: 2.5em;
+     -webkit-text-stroke: 1px  whitesmoke ;
+     transition: all 0.1s ease-in-out;
+}
+.popup-textt p{
+     margin-top: 20px;
+     color: #ebebeb;
+}
+
+ .open-image{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: transparent;
+     z-index: 10;
+     border: none;
+ }
+
+/* pop up untuk navbar*/
+.close-navbar{
+     border: none;
+     background: none;
+     position: absolute;
+     right: 10px;
+     top: 10px;
+}
+.close-navbar .lines:nth-child(1){
+     position: absolute;
+    
+     margin-bottom:0 ;
+     transform: rotate(45deg) ;
+     width: 40px;
+}
+.close-navbar .lines:nth-child(2){
+     
+     margin-bottom: 0;
+     transform: rotate(-45deg);
+     width: 40px;
+}
+.bg-navbar{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: -1;
+}
+ul{
+     width: 100%;
+     height: 100%;
+     background: none;
+     margin: auto;
+     display: block;
+}
+li{
+     left: 10%;
+     top: 20%;
+     position: absolute;
+     list-style: none;
+
+}
+li:nth-child(2){
+     margin-top: 100px;
+}
+li:nth-child(3){
+     margin-top: 200px;
+}
+li:nth-child(4){
+     margin-top: 300px ;
+}
+li a{
+   margin: 0;
+    font-size: 4em;
+    text-align: center;
+    color: transparent;
+    display: inline-block;
+    -webkit-text-stroke: 1px var(--pr-color);
+    transition: 0.3s 0.1s all ease-in-out;
+    
+}
+
+li a:hover{
+     color: #fff;
+}
+
+.navbar{
+     background: none;
+     position: fixed;
+     z-index: 1;
+     margin-top: 10px;
+     margin-left: 10px;
+     border: none;
+}
+.navbar:hover .lines::before{
+     width: 100%;
+     background-color: purple;
+}
+.lines{
+
+    width: 30px;
+    height: 2px;
+    margin-bottom: 6px;
+    background-color: #fff;
+    position: relative;
+    
+
+}
+.lines:before{
+     content: "";
+     position: absolute;
+     left: 0;
+     width: 0px;
+     height: 2px;
+     background-color: #fff;
+     transition: 0.5s;
+    
+}
+.lines:nth-child(2)::before{
+     transition-delay: 0.2s;
+}
+.lines:nth-child(3)::before{
+     transition-delay: 0.3s;
+}
+.lines:nth-child(2){
+     width: 35px;
+}
+.lines:nth-child(3){
+     width: 40px;
+}
+
+ .closeBtn {
+     width: 50px;
+     height: 20px;
+     margin-top: 10px;
+ }
+ 
+
+
+/* untuk section pengenalan member*/
+.member{
+     overflow-x: hidden;
+     position: relative;
+
+}
+
+ .mask{
+     width: 0;
+ }
+ section{
+     width: 100vw;
+     padding:  20vw 10vw;
+
+     h1{
+         font-size: 3rem;
+         margin: 0;
+     }
+     ul{
+         list-style-type: none;
+         display: flex;
+         gap: 3em;
+         width: 100%;
+         height: 300px;
+         padding: 0;
+
+         li{
+             
+             border-radius: .3em;
+             flex-grow: 1;
+         }
+
+     }
+ }
+ .container{
+     display: flex;
+    width: 300vw;
+
+     .col{
+         display: flex;
+     }
+     .pin{
+          position: relative;
+          height: 100vh;
+          margin: 0 50px;
+          padding: 0%;
+          width: 450px;
+         display: flex;
+     }
+    
+     
+}
+.jabatan{
+width: 350px;
+height: 480px;
+margin: auto;
+position: relative;
+display: flex;
+box-shadow: -8px 8px rgb(202, 202, 202);
+}
+.img-jabatan{
+     width: 100%;
+     height: 100%;
+     display: block;
+     object-fit: cover;
+     position: absolute;
+     z-index: -1;
+}
+.jabatan-teks{
+     position: absolute;
+     bottom: 10%;
+     left: 5%;
+     width: auto;
+     height: auto;
+}
+
+.jabatan-teks h1{
+     text-align: center;
+     -webkit-text-stroke: 1px white;
+     color: transparent;
+     font-size: 2.5em;
+     margin: 0;
+     padding: 0;
+}
+.jabatan-teks p{
+     color: #fff;  
+}
+.akhir{
+     margin: auto;
+     width: 90%;
+     
+}
+.h1{ 
+     margin: auto;
+     font-size: 3em;
+     color: #fff;
+}
+
+
+/*untuk contact*/
+.contact{
+     width: 100%;
+     height: 100vh;
+     position: relative;
+     
+}
+.c-marquee{
+     position: absolute;
+     display: flex;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 120px;
+}
+marquee{
+     width: 100%;
+     height: 100%;
+     margin: auto;
+}
+marquee span{
+     width: auto;
+     height: auto;
+     letter-spacing: -5px;
+     color: orangered;
+     font-size: 6.3em;
+}
+.form{
+     position: absolute;
+     width: 60%;
+     height: auto;
+     top: 25%;
+     left: 5%;   
+}
+.form h1{
+     color: white;
+     font-size: 2.5em;
+}
+.stroke{
+     color:transparent;
+     -webkit-text-stroke: 1px white;
+}
+
+.formm{
+     position: relative;
+     margin: 20px 0;
+     width: 90%;
+     height: 60px;
+}
+input{
+     background: none;
+     width: 100%;
+     height: 100%;
+     border: none;
+     font-size: 1.5em;
+     padding-left: 10px;
+     padding-top: 15px;
+     color: #ebebeb;
+     font-size: 1.2em;
+}
+.line-form,.color{
+     z-index: 1;
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     background-color: rgb(186, 0, 0);
+     width: 90%;
+     height: 5px;
+     display: flex;
+}
+
+.line-form{
+     transition:  1s all ease-in-out;
+     clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+}
+input:valid+.line-form,input:focus+.line-form{
+     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+     background: rgb(255, 94, 35);
+}
+input:focus{
+     border: none;
+     outline: none;
+}
+.name{
+     text-align: left;
+     width: auto;
+     height: auto;
+     z-index: 1;
+     position: relative;
+     color: #ebebeb;
+     font-size: 1.2em;
+     left: 0;
+     bottom: 35px;
+     transition: 0.5s all ease-in-out;
+     padding: 0;
+
+}
+input:valid ~.name,input:focus ~.name{
+     font-size: 0.8em;
+     bottom: 55px;
+
+}
+.color{
+     z-index: 0;
+     background: #9e9e9e;
+}
+
+.btn{
+     width: 120px;
+     height: 40px;
+     background: whitesmoke;
+     display: flex;
+     border: none;
+     position: relative;
+}
+.btn h1{
+     margin: auto;
+     z-index: 1;
+     font-size: 1.2em;
+     color: rgb(69, 69, 69);
+}
+.bg-cp{
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg,rgb(168, 0, 0),orangered) ;
+     clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+     transition: 0.5s all ease-in-out;
+
+}
+.btn:hover .bg-cp{
+     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+/* untuk responsive */
+/* untuk tampilan dekstop*/
+@media screen and (max-width:1024px){
+     .title{
+          font-size: 3em;
+     }
+     .card-img{
+          width: 400px;
+          height: 550px;
+     }
+    .two{
+     margin-left: 50px;
+    }
+}
+/* untuk tampilan tablet*/
+@media screen and (max-width:910px){
+     .textanim_title{
+          font-size: 2.5em;
+     }
+     .card-img{
+          width: 350px;
+          height: 500px;
+     }
+}
+
+@media screen and (max-width:880px){
+     .two{
+          margin-left: 0px;
+         }
+     .kelas-kartu{
+          display: block;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          margin-top: 80px;
+     }
+     .card-img{
+          width: 450px;
+          height: 550px;
+     }
+     
+}
+@media screen and (max-width:770px){
+     .title{
+          font-size: 2.3em;
+     }
+     .textanim_title{
+          font-size: 2.1em;
+     }
+}
+@media screen and (max-width:670px){
+     .title{
+          font-size: 3em;
+          text-align: left;
+     }
+     .textanim_title{
+          font-size: 1.7em;
+     }
+     .header_img{
+          width: 70%;
+     }
+.two{
+     padding-top: 80px;
+}  
+}
+@media screen and (max-width:600px){
+     li a {
+          font-size: 2em;
+     }
+}
+@media screen and (max-width:550px){
+     .jabatan{
+          scale: 0.8;
+     }
+     .card-img{
+          width: 350px;
+          height: 450px;
+     }
+}
+
+/*untuk tampilan mobile */
+@media screen and (max-width:470px){
+     .textanim_title{
+          text-align: left;
+     }
+     .two{
+          margin: 0;
+     }
+     .card-img{
+          width: 350px;
+          height: 450px;
+     }
+     .title{
+          font-size: 1.7em;
+     }
+     .textanim_title{
+          font-size: 1.2em;
+     }
+     .circle{
+          bottom: -20%;
+          right: 15%;
+     }
+     .form{
+          left: 10px;
+          width: 90%;
+     }
+     input{
+           padding-top: 10%;
+          font-size: 1em;
+     }
+     .form h1{
+          font-size: 1.5em;
+     }
+     .name{
+          font-size: 1em;
+     }
+     .color,.line-form{
+          height: 2px;
+          width: 100%;
+     }
+     /* untuk pop up */
+     .popup-img{
+          position: absolute;
+          width: 100%;
+          background-color: #000;
+     }
+     .popup-img-img{
+          opacity: 0.1;
+     }
+     .popup-text{
+          width: 100%;
+          margin: auto;
+          top: 40%;
+     }
+     .popup-textt{
+          width: 80%;
+     }
+     .konxol{
+          font-size: 1.7em;
+          text-align: left;  
+         
+     }
+     .popup-textt p{
+          margin-top: 20px;
+          font-size: 0.8em;
+     }
+}
+@media  screen and (max-width:375px){
+     .card-img{
+          width: 300px;
+          height: 400px;
+     }
+     input{
+          padding-top: 10%;
+         font-size: 0.8em;
+    }
+    .form h1{
+         font-size: 1em;
+    }
+    .name{
+         font-size: 0.8em;
+    }
+    .color,.line-form{
+         height: 2px;
+         width: 100%;
+    }
+}
+@media screen and (max-width:320px){
+     .title{
+          font-size: 1.2em;
+     }
+     .header_img{
+          width: 50%;
+          right: 0;
+     }
+     .card-img{
+          width: 250px;
+          height: 350px;
+     }
+}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralax Effect On GSAP</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!--untuk responsive navbar dan upper tombol-->
+    <button class="openBtn navbar" data-popup="popup5">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+    </button>
+    <div class="popupContainer navigasi" id="popup5">
+        <div class="popupContent">
+           
+           <ul>
+                <li><a class="text-navbar" href="" data-splitting>MESSI</a></li>
+                <li><a class="text-navbar" href="" data-splitting>GREATEST</a></li>
+                <li><a class="text-navbar" href="" data-splitting> OFFALL</a></li>
+                <li><a class="text-navbar" href="" data-splitting> TIME</a></li>
+                
+           </ul>
+            <button class="closeBtn navbar close-navbar">
+                <div class="lines miring"></div>
+                <div class="lines miring"></div>
+            </button>
+
+        </div>
+    </div>
+    
+    <a  href="#header" class="upper-tombol">
+        <div class="arrow">
+            <div class="hitam am"></div>
+            <div class="putih"></div>
+            <div class="hitam amm"></div>
+        </div>
+        <h1>UP.</h1>
+    </a>
+
+    <!--untuk opening  section -->
+    <header class="header" id="header">
+        <h1 data-splitting class="title" ><span class="titlegsap">text animation </span> <br><span class="stroke strokes-gsap">on GSAP</span></h1>
+        <div class="header_img">
+            <img src="./2426934-50437455-2560-1440.jpg" alt="1" class="header-img-img">
+
+        </div>
+    </header>
+    
+    <!--untuk garis pembatas teranimasikan-->
+    <div class="header-marque">
+        <div class="marque-txt">
+            <span class="marque-texs">
+                Hello guys
+                <span class="marq-star">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="">
+                </span>
+                    
+            </span>
+            <span class="marque-texs">
+                Hello guys
+                <span class="marq-star">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="">
+                </span>
+                    
+            </span>
+            <span class="marque-texs">
+                Hello guys
+                <span class="marq-star">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="">
+                </span>
+                    
+            </span>
+            <span class="marque-texs">
+                Hello guys
+                <span class="marq-star">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="">
+                </span>
+                    
+            </span>
+        
+        </div>
+    </div>
+   
+       
+    <!--untuk section gambar disertai pop up penjelasan-->
+    <section class="image-only">
+        <h1 class="textanim_title" data-splitting>
+            <span class="textanim_title-span">Profil </span> <span class="stroke">sekolah</span>
+        </h1>
+        <div class="popupContainer" id="popup1">
+            <div class="popupContent">
+                    <div class="popup-img">
+                        <img src="./2426934-50437455-2560-1440.jpg" alt="" class="popup-img-img">
+                    </div>
+                    <div class="popup-text">
+                        <div class="popup-textt">
+                            <h1><span class="konxol">POLISI TARUNA.</span></h1>
+                            <p>
+                                Polisi Taruna alias Poltar adalah Ekstrakulikuler yang berbentuk organinasi
+                                dibawah kendali Tim kesiswaan SMKN 2 DEPOK yang bertugas menjadi penegak kedisiplinan di lingkungan Taruna/Taruni
+                                serta menjadi Role model yang ideal.
+                            </p>
+                        </div>
+                        <button class="closeBtn navbar close-navbar">
+                            <div class="lines miring"></div>
+                            <div class="lines miring"></div>
+                        </button>
+                    </div>   
+            </div>
+        </div>
+        <div class="popupContainer" id="popup2">
+            <div class="popupContent">
+                <div class="popup-img">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="" class="popup-img-img">
+                </div>
+                <div class="popup-text">
+                    <div class="popup-textt">
+                        <h1><span class="konxol">SEJARAH.</span></h1>
+                        <p>
+                            Polisi Taruna alias Poltar adalah Ekstrakulikuler yang berbentuk organinasi
+                            dibawah kendali Tim kesiswaan SMKN 2 DEPOK yang bertugas menjadi penegak kedisiplinan di lingkungan Taruna/Taruni
+                            serta menjadi Role model yang ideal.
+                        </p>
+                    </div>
+                    <button class="closeBtn navbar close-navbar">
+                        <div class="lines miring"></div>
+                        <div class="lines miring"></div>
+                    </button>
+                </div>   
+        </div>
+        </div>
+        <div class="popupContainer" id="popup3">
+            <div class="popupContent">
+                <div class="popup-img">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="" class="popup-img-img">
+                </div>
+                <div class="popup-text">
+                    <div class="popup-textt">
+                        <h1><span class="konxol">VISI & MISI.</span></h1>
+                        <p>
+                           <span class="stroke">Visi</span>
+                           <br>
+                           Menjadikan lagi Taruna/taruni sebagai Center of Excellent yang dapat mewujudkna hasil didik 
+                           yang Profesional dan di cintai rakyat
+                           <br>
+                           <br>
+                           <span class="stroke">Misi</span>
+                           <br>
+                           <br>
+                            Mengoptimalkan kinerja organisasi dengan validasi organisasi, mengisian materi, pemenuhan saran prasarana pendidikan dan pembinaan latihan.
+                            <br>
+                            <br>
+                            Meningkatkan kualitas hasil didik agar menjadi perwira professional.
+                            <br>
+                            <br>
+                            Pemimpin masa depan dan di cintai rakyat.
+                            <br>
+                            <br>
+                            Meningkatkan peran dan fungsi pengkajian dan pengembangan.
+                            <br>
+                            <br>
+                            Melaksanakan kegiatan organisasi dan pembinaan mengnai Kepemimpinan.
+                        </p>
+                    </div>
+                    <button class="closeBtn navbar close-navbar">
+                        <div class="lines miring"></div>
+                        <div class="lines miring"></div>
+                    </button>
+                </div>   
+            </div>
+        </div>
+        <div class="popupContainer" id="popup4">
+            <div class="popupContent">
+                <div class="popup-img">
+                    <img src="./2426934-50437455-2560-1440.jpg" alt="" class="popup-img-img">
+                </div>
+                <div class="popup-text">
+                    <div class="popup-textt">
+                        <h1><span class="konxol">Program Kerja.</span></h1>
+                        <p>
+                            1. Menjalankan Gerakan Disiplin Taruna(GDT).
+                            <br>
+                            <br>
+                            2. Kegiatan Internal Latihan baris-berbaris(PBB) dan
+                                Bina fisik.
+                            <br>
+                            <br>
+                            3. Menjaga keamanan dan ketertiban setiap acara atau kegiatan sekolah.
+                            <br>
+                            4. Kegiatan internal Latihan dasar kepemimpinan Poltar(ldkp).
+                            <br>
+                            <br>
+                            5. Latihan gabungan bersama sekolah lain.
+                            <br>
+                            <br>
+                            6. Serta menjadi Role model yang ideal bagi Taruna/Taruni.
+                        </p>
+                    </div>
+                    <button class="closeBtn navbar close-navbar">
+                        <div class="lines miring"></div>
+                        <div class="lines miring"></div>
+                    </button>
+                </div>   
+            </div>
+        </div>
+
+        <!---->
+        <div class="kelas-kartu">
+            <div class="kartu kartu-dua">
+                
+                    <div class="card-img disp">
+                        <button class="openBtn open-image" data-popup="popup1"></button>
+                            <div class="circle">
+                                <div class="text">
+                                    <p>AKU SAYANG KAMU JUGA SAYANG  </p>
+                                </div>
+                            </div>
+                            <img src="./copy.jpg" alt="6" class="card-images" >
+                            <img src="./2426934-50437455-2560-1440.jpg" alt="7" class="card-images">
+                            <span class="card-text" >DFNSI</span>
+                        </button>
+                        
+                    </div>
+                
+            </div>
+            <div class="kartu two kartu-dua ">
+                <div class="card-img disp ">
+                    <button class="openBtn open-image" data-popup="popup2"></button>
+                        <div class="circle">
+                            <div class="texts">
+                                <p>AKU SAYANG KAMU JUGA SAYANG </p>
+                            </div>
+                        </div>
+                            <img src="./copy.jpg" alt="6" class="card-images" >
+                            <img src="./2426934-50437455-2560-1440.jpg" alt="7" class="card-images">
+                            <span class="card-text" >hello</span>
+                    </button>
+    
+                </div>
+            </div>
+        </div>
+        <div class="kelas-kartu">
+            <div class="kartu">
+                <div class="card-img disp" >
+                    <button class="openBtn open-image" data-popup="popup3"></button>
+                        <div class="circle">
+                            <div class="textss">
+                                <p>AKU SAYANG KAMU JUGA SAYANG  </p>
+                            </div>
+                        </div>  
+                        <img src="./copy.jpg" alt="6" class="card-images" >
+                        <img src="./2426934-50437455-2560-1440.jpg" alt="7" class="card-images">
+                        <span class="card-text" >hello</span>
+                    </button>
+                    
+                </div>
+            </div>
+            <div class="kartu two kartu-dua">
+                <div class="card-img disp">
+                    <button class="openBtn open-image" data-popup="popup4"></button>
+                    <div class="circle">
+                        <div class="textsss">
+                            <p>AKU SAYANG KAMU JUGA SAYANG  </p>
+                        </div>
+                    </div>
+                            <img src="./copy.jpg" alt="6" class="card-images" >
+                            <img src="./2426934-50437455-2560-1440.jpg" alt="7" class="card-images">
+                            <span class="card-text" >hello</span>
+                    </button>
+    
+                </div>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!-- slogan -->
+    <section class="teks-only">
+        <!---->
+        <div class="three-object">
+            <div class="penutup-logo"></div>
+            <iframe class="iframe" src='https://my.spline.design/tesseract-f6a13eb9c334c0883536d73ecc918349/' frameborder='0' width='100%' height='100%'></iframe>
+            
+        </div>
+        <!---->
+    
+        <div class="teks">
+            <p class="reveal-type sink">
+                Satya Bhakti Taruna.
+            </p>
+        </div>
+                
+       
+    </section>
+
+    <!--untuk jabatan-->
+    <div class="member"> 
+        <div class="container scrollx">
+            
+            <section class="sec1 pin">
+                
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+                    <div class="jabatan-teks">
+                        <h1>Pogba1</h1>
+                        <p class="p">pembina</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sec2 pin">
+               
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+                    <div class="jabatan-teks">
+                        <h1>Pogba</h1>
+                        <p class="p">pembina</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sec3 pin">
+               
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+                    <div class="jabatan-teks">
+                        <h1>Pogb3</h1>
+                        <p class="p">pembina</p>
+                    </div>
+                </div>
+            </section>
+            <section class="sec4 pin">
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+
+                    <div class="jabatan-teks">
+                        <h1>pogbz</h1>
+                        <p>pembina</p>
+                    </div>
+                </div>
+                <!----
+                <h1 class="h1"> WE <br>ARE <br>POLISI <br> TARUNA </h1>
+                <!---->
+            </section>
+            <section class="sec5 pin">
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+
+                    <div class="jabatan-teks">
+                        <h1>pogbz</h1>
+                        <p>pembina</p>
+                    </div>
+                </div>
+                <!----
+                <h1 class="h1"> WE <br>ARE <br>POLISI <br> TARUNA </h1>
+                <!---->
+            </section>
+            <section class="sec6 pin">
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+
+                    <div class="jabatan-teks">
+                        <h1>pogbz</h1>
+                        <p>pembina</p>
+                    </div>
+                </div>
+                <!----
+                <h1 class="h1"> WE <br>ARE <br>POLISI <br> TARUNA </h1>
+                <!---->
+            </section>
+            <section class="sec7 pin">
+                <div class="jabatan">
+                    <img src="./copy.jpg" alt="" class="img-jabatan">
+
+                    <div class="jabatan-teks">
+                        <h1>pogbz</h1>
+                        <p>pembina</p>
+                    </div>
+                </div>
+                <!----
+                <h1 class="h1"> WE <br>ARE <br>POLISI <br> TARUNA </h1>
+                <!---->
+            </section>
+            
+        </div>
+       
+
+    </div>
+    
+    <!--contact-->
+    <section class="contact">
+       
+            <div class="c-marquee">
+             <marquee class="gtdeh" id="Marquees" behavior="scroll" scrollamount="20" scrolldelay="10">
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+                <span>CONTACT US /</span>
+             </marquee>
+                
+            </div>
+            <div class="form">
+                <h1>SEND <span class="stroke">MESSAGE</span></h1>
+                <div class="formm">
+                    <input type="text" name="name" required>
+                    <span class="line-form"></span>
+                    <span class="color"></span>
+                    <span class="name">NAME</span>
+               </div>
+                <div class="formm">
+                    <input type="text" name="email" required>
+                    <span class="line-form"></span></span>
+                    <span class="color"></span>
+                    <span class="name">EMAIL</span>
+                </div>
+                <div class="formm">
+                    <input type="text" name="comment" required>
+                    <span class="line-form"></span></span>
+                    <span class="color"></span>
+                    <span class="name">COMMENT</span>
+                </div>
+                <button class="btn" type="submit"><span class="bg-cp"></span><h1>SEND</h1></button>
+            </div>
+    </section>
+
+</body>
+
+<!--javascript-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="./splitting.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://unpkg.com/split-type"></script>
+<script src="./script.js"></script>
+<script src="./hover-effect.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+<!--unutk script ke 2-->
+<script>
+       Array.from(document.querySelectorAll('.disp')).forEach((e) => {
+        const imgs = Array.from(e.querySelectorAll('img'));
+        new hoverEffect({
+            parent : e,
+            intensity: 0.3,
+            image1: imgs[0].getAttribute('src'),
+            image2: imgs[1].getAttribute('src'),
+            displacementImage : 'four.png',
+            imagesRatio: 1440 / 2560
+        })
+    })
+
+
+//untuk anu
+
+const container = document.querySelector(".container");
+        const sections =  gsap.utils.toArray(".container section");
+        const tekss =  gsap.utils.toArray(".anim");
+        const mask = document.querySelector(".mask");
+    
+        let scrollTween = gsap.to(sections, {
+            xPercent: -150 * (sections.length -1),
+            ease: "none",
+            scrollTrigger :{
+                trigger:".container",
+                start: "center center",
+                pin: true,
+                scrub: 1,
+                end: "+=3000"
+                 //snap: 1 / (sections.length - 1),
+            }
+    
+        });
+        console.log(1 / (sections.length -1))
+        //
+        gsap.to(mask, {
+            width: "100%",
+            scrollTrigger: {
+                trigger: ".wrapper",
+                start: "top left",
+                scrub:1
+    
+            }
+        });
+
+        
+    
+</script>
+
+</html>
