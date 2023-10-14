@@ -23,7 +23,6 @@ body{
      display: block;
 }
 
-
 /* untuk mengedit scrollbar*/
 ::-webkit-scrollbar{
      width: 0px;
@@ -51,8 +50,6 @@ body{
      margin: auto;
      width: 90%;
      height: 80%;
-
-
 }
 .hitam,.putih{
      margin: auto;
@@ -107,13 +104,12 @@ body{
 
 /*untuk section pertama header*/
 .header{
-     width: 100%;
+     width: 100%; 
      height: 100vh;
      display: flex;
      justify-content: center;
      align-items: center;
      font-family: 'syne',sans-serif;
-
 }
 .char{
      display: inline-block;
@@ -125,7 +121,6 @@ body{
      color: white;
      text-transform: uppercase;
      mix-blend-mode: difference;
-     
 }
 .title .stroke ,.struk{
      color: transparent;
@@ -149,7 +144,6 @@ body{
      height: 100%;
      object-fit: cover;
 }
-
 
 /* untuk marquee*/
 .header-marque{
@@ -182,7 +176,8 @@ body{
      height: 40px;
      right: 0;
 }
-.marq-star img{
+.marq-star i{
+     color: orangered;
      display: block;
      width: 100%;
      height: 100%;
@@ -191,8 +186,6 @@ body{
      display: inline-block;
 	will-change: transform;
 }
-
-
 
 /* untuk teks*/
 
@@ -225,7 +218,6 @@ iframe{
      width: 100%;
      height: 100vh;
      display: flex;
-     
 }
 
 .teks{
@@ -234,21 +226,19 @@ iframe{
      display: flex;
      height: auto;
      width: 70%;
-   
 }
 .sink{
+     font-size: 3em;
      margin: auto;
      text-align: center;
      color: #fff;
 }   
-   
 
 /* untuk section image dengan pop up*/
 .kartu{
      margin: auto;
    
 }
-
 .two{
      margin-top: 200px;
 }
@@ -265,16 +255,12 @@ iframe{
      color: var(--pr-color);
      text-align: right;
      text-transform: uppercase;
-     overflow: hidden;
-    
-     
+     overflow: hidden;   
 }
 .textanim_title .stroke{
      color: transparent;
      -webkit-text-stroke: 1px var(--pr-color);
 }
-
-
 .kelas-kartu{
      display: flex;
      justify-content: center;
@@ -282,7 +268,6 @@ iframe{
      width: auto;
      height: auto;
      position: relative;
-    
 }
 .card-img{
      position: relative;
@@ -291,8 +276,7 @@ iframe{
      cursor: pointer;
      object-fit: cover;
     margin: auto;
-     clip-path: polygon(0% 0%,0% 0%,0% 100%,0% 100%);
-     
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
 }
 .card-images{
      width: 100%;
@@ -306,21 +290,15 @@ iframe{
      scale: 0.5;
 }
 .card-text{
+     transform: rotate(-90deg);
+     left: -80px;
+     top: 100px;
      position: absolute;
-     font-size: var(--fz-big) ;
-     scale: 0.8;
+     font-size: 2.5em;
      color: transparent;
      -webkit-text-stroke: 1px white;
      mix-blend-mode: difference;
-     transform: translate(20px);
-     opacity: 0;
-     z-index: 50;
-     transition:  1.3s var(--cubicbz);
-     
-}
-.card-img:hover .card-text{
-     transform: translateY(0);
-     opacity: 1;
+     z-index: 1;    
 }
 .circle{
      position: absolute;
@@ -333,7 +311,7 @@ iframe{
      margin: auto;
      z-index: 10;
      bottom: 10%;
-     right: -25%;
+     right: -20%;
      mix-blend-mode: difference;
     
 }
@@ -346,8 +324,6 @@ iframe{
      top: 0;
      right: 0;
      clip-path: none;
-   
-   
 }
 .text span,.texts span,.textss span,.textsss span{
      mix-blend-mode: difference;
@@ -359,7 +335,6 @@ iframe{
      font-family: 'VT323', monospace;
      color: #fff;
      clip-path: none;
- 
 }
 
 /* pop-up berada penjelasan */
@@ -370,7 +345,7 @@ iframe{
      top: 0;
      left: 0;
      width: 100%;
-     height: 100vh;
+     height: 100%;
      justify-content: center;
      align-items: center;
      background-color: #000;
@@ -412,9 +387,9 @@ iframe{
      height: 80%;
      margin: auto;
 }
-.konxol{
+.popup-textt h1{
      color: transparent;
-     font-size: 2.5em;
+     font-size: 2em;
      -webkit-text-stroke: 1px  whitesmoke ;
      transition: all 0.1s ease-in-out;
 }
@@ -527,8 +502,7 @@ li a:hover{
      width: 0px;
      height: 2px;
      background-color: #fff;
-     transition: 0.5s;
-    
+     transition: 0.5s;   
 }
 .lines:nth-child(2)::before{
      transition-delay: 0.2s;
@@ -548,21 +522,14 @@ li a:hover{
      height: 20px;
      margin-top: 10px;
  }
- 
-
 
 /* untuk section pengenalan member*/
 .member{
      overflow-x: hidden;
      position: relative;
-
 }
-
- .mask{
-     width: 0;
- }
  section{
-     width: 100vw;
+     width: 100%;
      padding:  20vw 10vw;
 
      h1{
@@ -587,29 +554,30 @@ li a:hover{
  }
  .container{
      display: flex;
-    width: 300vw;
-
      .col{
-         display: flex;
+          display: flex;
      }
      .pin{
           position: relative;
           height: 100vh;
           margin: 0 50px;
           padding: 0%;
-          width: 450px;
-         display: flex;
+          width: 800px !important;
+          display: flex;
      }
-    
+     .one{
+          width: 300px !important;
+      opacity: 1;
+     }
      
-}
-.jabatan{
-width: 350px;
-height: 480px;
-margin: auto;
-position: relative;
-display: flex;
-box-shadow: -8px 8px rgb(202, 202, 202);
+     .jabatan{
+          width: 800px;
+          height: 480px;
+          margin: auto;
+          position: relative;
+          display: flex;
+          box-shadow: -8px 8px rgb(202, 202, 202);
+     }
 }
 .img-jabatan{
      width: 100%;
@@ -649,13 +617,11 @@ box-shadow: -8px 8px rgb(202, 202, 202);
      color: #fff;
 }
 
-
 /*untuk contact*/
 .contact{
      width: 100%;
      height: 100vh;
-     position: relative;
-     
+     position: relative;     
 }
 .c-marquee{
      position: absolute;
@@ -745,7 +711,6 @@ input:focus{
      bottom: 35px;
      transition: 0.5s all ease-in-out;
      padding: 0;
-
 }
 input:valid ~.name,input:focus ~.name{
      font-size: 0.8em;
@@ -755,9 +720,7 @@ input:valid ~.name,input:focus ~.name{
 .color{
      z-index: 0;
      background: #9e9e9e;
-}
-
-.btn{
+}.btn{
      width: 120px;
      height: 40px;
      background: whitesmoke;
@@ -778,7 +741,6 @@ input:valid ~.name,input:focus ~.name{
      background: linear-gradient(90deg,rgb(168, 0, 0),orangered) ;
      clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
      transition: 0.5s all ease-in-out;
-
 }
 .btn:hover .bg-cp{
      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
@@ -808,7 +770,6 @@ input:valid ~.name,input:focus ~.name{
           height: 500px;
      }
 }
-
 @media screen and (max-width:880px){
      .two{
           margin-left: 0px;
@@ -867,12 +828,20 @@ input:valid ~.name,input:focus ~.name{
 
 /*untuk tampilan mobile */
 @media screen and (max-width:470px){
+     .sink{
+          font-size: 1.2em;
+     }
+     .header_img{
+          width: 50%;
+          left: 40%;
+     }
      .textanim_title{
           text-align: left;
      }
      .two{
           margin: 0;
      }
+
      .card-img{
           width: 350px;
           height: 450px;
@@ -884,8 +853,17 @@ input:valid ~.name,input:focus ~.name{
           font-size: 1.2em;
      }
      .circle{
-          bottom: -20%;
-          right: 15%;
+          width: 210px;
+          height: 210px;
+          bottom: -15%;
+          left: -20%;
+          display: flex;
+        
+     }
+     .text span,.texts span,.textss span,.textsss span{
+          font-size: 1.2em;
+          transform-origin:0 105px ;
+          margin: auto;
      }
      .form{
           left: 10px;
@@ -933,6 +911,17 @@ input:valid ~.name,input:focus ~.name{
      }
 }
 @media  screen and (max-width:375px){
+     .circle{
+          position: absolute;
+          width: 200px;
+          height: 200px;
+          bottom: -20%;
+          right: 20%; 
+     }
+     .text span,.texts span,.textss span,.textsss span{
+          font-size: 1.2em;
+          transform-origin:0 100px ;
+     }
      .card-img{
           width: 300px;
           height: 400px;
@@ -953,6 +942,17 @@ input:valid ~.name,input:focus ~.name{
     }
 }
 @media screen and (max-width:320px){
+     .circle{
+          position: absolute;
+          width: 190px;
+          height: 190px;
+          bottom: -20%;
+          right: 10%; 
+     }
+     .text span,.texts span,.textss span,.textsss span{
+          font-size: 1.2em;
+          transform-origin:0 85px ;
+     }
      .title{
           font-size: 1.2em;
      }
