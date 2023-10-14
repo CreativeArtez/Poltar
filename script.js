@@ -2,24 +2,17 @@
 
 document.addEventListener("DOMContentLoaded", function (){
     'use strict';
-
     Splitting();
     gsap.registerPlugin(ScrollTrigger);
-    const gTl = gsap.timeline();
 
+    const gTl = gsap.timeline();
     gTl.from (".title .char" ,1 ,{opacity: 0 ,yPercent: 130,stagger: 0.06,ease:"back.out" });
     gTl.to (".header_img" ,2 ,{clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"  });
     gTl.from(".header_img img " ,2 ,{scale: 1.4, ease: "expo.out"} ,"-=2");
-    /*
-    gTl.from (".header-marque",1,{opacity:0,yPercent:40,ease:"back.out"})
-    */
+    
     const gsapItem = gsap.utils.toArray('.kartu')
     gsapItem.forEach((gslt) => {
-       
         const cardImages  = gslt.querySelectorAll('.card-img');
-        
-       
-    
         let tl = gsap.timeline({
             scrollTrigger:{
                 trigger: gslt,
@@ -33,13 +26,8 @@ document.addEventListener("DOMContentLoaded", function (){
         });   
         tl.to(cardImages,5,{clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",duration:5000,ease:"expo.out"});
     })
-    
-
-
-
 });
 //untuk all
-    
 function All () {
     gsap.to('.name', {
         scrollTrigger: {
@@ -68,9 +56,6 @@ function All () {
         },
         rotate: -720
     })
-  
-    
-
     gsap.to('.titlegsap' ,{
         scrollTrigger: {
             trigger:'header',
@@ -96,9 +81,6 @@ function All () {
             scrub:'2'
         },
         xPercent: -70,
-       
-       
-
     })
     gsap.to('.header_img img', {
         scrollTrigger: {
@@ -119,26 +101,25 @@ function All () {
 			},
 			xPercent: -50
 	})
-		gsap.to('.marq-star img', {
-			scrollTrigger: {
-				trigger: '.header',
-				start: 'top top',
-				scrub: 'true'
-			},
-			rotate: -720
-		})
-       
-       
-        
-   
-       
+    gsap.to('.marq-star i', {
+        scrollTrigger: {
+            trigger: '.header',
+            start: 'top top',
+            scrub: 'true'
+        },
+        rotate: -720
+    })
+    gsap.to('.one', {
+        scrollTrigger: {
+            trigger: '.one',
+            start: 'top',
+            scrub: 'true'
+        },
+       opacity:0
+    }) 
 }
-
 All()
-
-       
 //untuk pop up
-
 const openBtns = document.querySelectorAll('.openBtn');
 const closeBtns = document.querySelectorAll('.closeBtn');
 const popupContainers = document.querySelectorAll('.popupContainer');
@@ -146,7 +127,6 @@ const popupContainers = document.querySelectorAll('.popupContainer');
 function openPopup(popupId) {
     const popup = document.getElementById(popupId);
     popup.style.display = 'flex';
-
 }
 
 function closePopup(popupId) {
@@ -155,10 +135,8 @@ function closePopup(popupId) {
 }
 openBtns.forEach(btn => {
     btn.addEventListener('click', () => {  
-        
         const popupId = btn.getAttribute('data-popup');
         openPopup(popupId);       
-        
 
         const gTl = gsap.timeline();
         gTl.fromTo(".popupContent",0.6, {clipPath: "polygon(0% 0%,0% 0%,0% 100%,0% 100%)" ,scrub: 'smooth'},
@@ -168,7 +146,6 @@ openBtns.forEach(btn => {
     });
     
 });
-
 closeBtns.forEach(btn => {  
     btn.addEventListener('click', () => {
         const popupId = btn.closest('.popupContainer').getAttribute('id');
@@ -181,8 +158,7 @@ closeBtns.forEach(btn => {
 const text = document.querySelector(".text p");
 const texts = document.querySelector(".texts p");
 const textss = document.querySelector(".textss p");
-
-
+const textsss = document.querySelector(".textsss p");
 
 text.innerHTML = textss.innerText.split("").map(
     (char, i ) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
@@ -195,4 +171,6 @@ texts.innerHTML = textss.innerText.split("").map(
 textss.innerHTML = textss.innerText.split("").map(
     (char, i ) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
 ).join("")
-
+textsss.innerHTML = textss.innerText.split("").map(
+    (char, i ) => `<span style="transform:rotate(${i * 6}deg)">${char}</span>`
+).join("")
