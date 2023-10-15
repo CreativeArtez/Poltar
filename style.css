@@ -147,6 +147,7 @@ body{
 
 /* untuk marquee*/
 .header-marque{
+     transform: translateY(-40px);
      left: 0;
      width: 100%;
      height: auto;
@@ -280,7 +281,7 @@ iframe{
 }
 .card-images{
      width: 100%;
-     height: 100%;
+     height: auto;
      object-fit: cover;
      position: absolute;
      z-index: -1;
@@ -290,9 +291,9 @@ iframe{
      scale: 0.5;
 }
 .card-text{
-     transform: rotate(-90deg);
-     left: -80px;
-     top: 100px;
+    writing-mode: vertical-rl;
+     top: 10px;
+     left: 0;
      position: absolute;
      font-size: 2.5em;
      color: transparent;
@@ -474,8 +475,8 @@ li a:hover{
 }
 
 .navbar{
+
      background: none;
-     position: fixed;
      z-index: 1;
      margin-top: 10px;
      margin-left: 10px;
@@ -483,7 +484,7 @@ li a:hover{
 }
 .navbar:hover .lines::before{
      width: 100%;
-     background-color: purple;
+     background-color: orangered;
 }
 .lines{
 
@@ -562,7 +563,7 @@ li a:hover{
           height: 100vh;
           margin: 0 50px;
           padding: 0%;
-          width: 800px !important;
+          width: 600px !important;
           display: flex;
      }
      .one{
@@ -571,21 +572,22 @@ li a:hover{
      }
      
      .jabatan{
-          width: 800px;
+          width: 600px;
           height: 480px;
           margin: auto;
-          position: relative;
           display: flex;
-          box-shadow: -8px 8px rgb(202, 202, 202);
+          position: relative;
      }
-}
-.img-jabatan{
-     width: 100%;
-     height: 100%;
-     display: block;
-     object-fit: cover;
-     position: absolute;
-     z-index: -1;
+     .img-jabatan{
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+         transform: translate(-50%,-505);
+     }
+     
 }
 .jabatan-teks{
      position: absolute;
@@ -828,8 +830,23 @@ input:valid ~.name,input:focus ~.name{
 
 /*untuk tampilan mobile */
 @media screen and (max-width:470px){
+     .popup-textt h1{
+          font-size: 1.5em;
+     }
+     li a{
+          font-size: 1.5em;
+       }
+     .upper-tombol{
+          width: 40px;
+          height: 55px;
+          font-size: 0.6em;
+     }
+     .card-text{
+          font-size: 1.5em;
+     }
      .sink{
-          font-size: 1.2em;
+          text-align:;
+          font-size: 1.8em;
      }
      .header_img{
           width: 50%;
@@ -847,6 +864,7 @@ input:valid ~.name,input:focus ~.name{
           height: 450px;
      }
      .title{
+          text-align: center;
           font-size: 1.7em;
      }
      .textanim_title{
@@ -912,11 +930,8 @@ input:valid ~.name,input:focus ~.name{
 }
 @media  screen and (max-width:375px){
      .circle{
-          position: absolute;
           width: 200px;
           height: 200px;
-          bottom: -20%;
-          right: 20%; 
      }
      .text span,.texts span,.textss span,.textsss span{
           font-size: 1.2em;
@@ -943,11 +958,10 @@ input:valid ~.name,input:focus ~.name{
 }
 @media screen and (max-width:320px){
      .circle{
-          position: absolute;
           width: 190px;
           height: 190px;
-          bottom: -20%;
-          right: 10%; 
+          bottom: -25%;
+
      }
      .text span,.texts span,.textss span,.textsss span{
           font-size: 1.2em;
