@@ -878,6 +878,7 @@ input:valid ~.name,input:focus ~.name{
           height: 450px;
      }
      .title{
+	  transfrom: translateY(80px);
           text-align: center;
           font-size: 1.7em;
      }
