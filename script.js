@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", function (){
     'use strict';
 
@@ -21,9 +20,7 @@ document.addEventListener("DOMContentLoaded", function (){
             scrollTrigger:{
                 trigger: gslt,
                 start: "top 95% ",
-                end:"top 70%",
-                toggleActions:"play none none none",
-                once: true
+                toggleActions:"play play play play",
             }
         });   
         tl.to(cardImages,1,{clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",opacity:1, ease:"expo.out"});
@@ -98,7 +95,6 @@ function All () {
         duration: 2
     })
 
-
     gsap.to('.marque-txt', {
 			scrollTrigger: {
 				trigger: '.header',
@@ -115,16 +111,6 @@ function All () {
         },
         rotate: -720
     })
-   
-    gsap.to('.one', {
-        scrollTrigger: {
-            trigger: '.one',
-            start: 'top top',
-            scrub: 'true'
-        },
-        opacity:0
-        
-    })  
 }
 
 All()
