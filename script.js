@@ -9,9 +9,7 @@ document.addEventListener("DOMContentLoaded", function (){
     gTl.from (".title .char" ,1 ,{opacity: 0 ,yPercent: 130,stagger: 0.06,ease:"back.out" });
     gTl.to (".header_img" ,2 ,{clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"  });
     gTl.from(".header_img img " ,2 ,{scale: 1.4, ease: "expo.out"} ,"-=2");
-    /*
-    gTl.from (".header-marque",1,{opacity:0,yPercent:40,ease:"back.out"})
-    */
+	
     const gsapItem = gsap.utils.toArray('.kartu')
     gsapItem.forEach((gslt) => {
        
@@ -20,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function (){
             scrollTrigger:{
                 trigger: gslt,
                 start: "top 95% ",
+		end: "top 80%",
                 toggleActions:"play play play play",
             }
         });   
@@ -81,8 +80,6 @@ function All () {
             scrub:'1'
         },
         xPercent: -70,
-       
-       
 
     })
     gsap.to('.header_img img', {
@@ -96,13 +93,14 @@ function All () {
     })
 
     gsap.to('.marque-txt', {
-			scrollTrigger: {
-				trigger: '.header',
-				start: 'top top',
-				scrub:'1'
-			},
-			xPercent: -50
-	})
+	scrollTrigger: {
+	trigger: '.header',
+	start: 'top top',
+	scrub:'1'
+	},
+	xPercent: -50
+})
+	
     gsap.to('.marq-star i', {
         scrollTrigger: {
             trigger: '.header',
