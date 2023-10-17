@@ -859,7 +859,6 @@ input:valid ~.name,input:focus ~.name{
           font-size: 1.5em;
      }
      .sink{
-          text-align:;
           font-size: 1.8em;
      }
      .header_img{
@@ -872,13 +871,15 @@ input:valid ~.name,input:focus ~.name{
      .two{
           margin: 0;
      }
-
+     .p{
+          transform: translateX(80px);
+     }
      .card-img{
           width: 350px;
           height: 450px;
      }
      .title{
-	  transfrom: translateY(80px);
+          transform: translateY(-100px);
           text-align: center;
           font-size: 1.7em;
      }
