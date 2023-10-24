@@ -1,4 +1,5 @@
 
+
 document.addEventListener("DOMContentLoaded", function (){
     'use strict';
 
@@ -9,33 +10,27 @@ document.addEventListener("DOMContentLoaded", function (){
     gTl.from (".title .char" ,1 ,{opacity: 0 ,yPercent: 130,stagger: 0.06,ease:"back.out" });
     gTl.to (".header_img" ,2 ,{clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)"  });
     gTl.from(".header_img img " ,2 ,{scale: 1.4, ease: "expo.out"} ,"-=2");
-	
+
     const gsapItem = gsap.utils.toArray('.kartu')
     gsapItem.forEach((gslt) => {
        
         const cardImages  = gslt.querySelectorAll('.card-img');
+
         let tl = gsap.timeline({
             scrollTrigger:{
                 trigger: gslt,
                 start: "top 95% ",
-		end: "top 80%",
+                end: "top 80%",
                 toggleActions:"play play play play",
             }
         });   
         tl.to(cardImages,1,{clipPath: "polygon(0% 0%,100% 0%,100% 100%,0% 100%)",opacity:1, ease:"expo.out"});
     })
+
 });
 //untuk all
     
 function All () {
-    gsap.to('.name', {
-        scrollTrigger: {
-            trigger:'.gsap__item',
-            start:'top',
-            scrub: true
-        },
-        xPercent: -100
-    })
 
     gsap.from('.upper-tombol', {
         scrollTrigger: {
@@ -43,18 +38,18 @@ function All () {
             start: 'top top',
             scrub: true
         },
-        xPercent: 150
+        opacity: 0,
+        yPercent:-50
     })
-    
-    gsap.to('.circle' ,{
+
+    gsap.to('.t-img' ,{
         scrollTrigger: {
             end: 'bottom',
             trigger:'.kartu kartu-dua',
-            scrub:true
+            scrub:3
         },
-        rotate: -720
+        yPercent:100
     })
-  
     gsap.to('.titlegsap' ,{
         scrollTrigger: {
             trigger:'header',
@@ -67,7 +62,7 @@ function All () {
         scrollTrigger: {
             trigger:'header',
             start: 'top ',
-            scrub: '1.9'
+            scrub: '2'
         },
         xPercent: 40,
         yPercent: 80
@@ -80,32 +75,33 @@ function All () {
             scrub:'1'
         },
         xPercent: -70,
+       
+       
 
     })
     gsap.to('.header_img img', {
         scrollTrigger: {
             trigger:'header',
             start: 'top ',
-            scrub:'true'
+            scrub: true
         },
         scale:1.2,
         duration: 2
     })
 
     gsap.to('.marque-txt', {
-	scrollTrigger: {
-	trigger: '.header',
-	start: 'top top',
-	scrub:'1'
-	},
-	xPercent: -50
-})
-	
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub:'1'
+			},
+			xPercent: -50
+	})
     gsap.to('.marq-star i', {
         scrollTrigger: {
             trigger: '.header',
             start: 'top top',
-            scrub: 'true'
+            scrub: true
         },
         rotate: -720
     })
@@ -152,27 +148,3 @@ closeBtns.forEach(btn => {
         closePopup(popupId);
     });   
 });
-
-//untuk anu
-
-const text = document.querySelector(".text p");
-const texts = document.querySelector(".texts p");
-const textss = document.querySelector(".textss p");
-const textsss = document.querySelector(".textsss p");
-
-
-text.innerHTML = textss.innerText.split("").map(
-    (char, i ) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
-).join("")
-
-texts.innerHTML = textss.innerText.split("").map(
-    (char, i ) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
-).join("")
-
-textss.innerHTML = textss.innerText.split("").map(
-    (char, i ) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
-).join("")
-textsss.innerHTML = textss.innerText.split("").map(
-    (char, i ) => `<span style="transform:rotate(${i * 9}deg)">${char}</span>`
-).join("")
-
