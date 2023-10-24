@@ -133,7 +133,7 @@ body{
 .title .stroke ,.struk{
      color: transparent;
      display: inline-block;
-     -webkit-text-stroke: 1px var(--pr-color);
+     -webkit-text-stroke: 0.6px var(--pr-color);
 }
 .header_img{
 
@@ -268,7 +268,18 @@ iframe{
 }
 .textanim_title .stroke{
      color: transparent;
-     -webkit-text-stroke: 1px var(--pr-color);
+     -webkit-text-stroke: 0.6px var(--pr-color);
+}
+.t-img{
+     bottom: 0;
+     font-size: 1.4em;
+     right: 20px;
+     position: absolute;
+     width: auto;
+     height: max-content;
+     color: white;
+     writing-mode: vertical-lr ;
+    
 }
 .kelas-kartu{
      display: flex;
@@ -309,43 +320,6 @@ iframe{
      mix-blend-mode: difference;
      z-index: 1;    
 }
-.circle{
-     position: absolute;
-     width: 260px;
-     height: 260px;
-     border-radius: 50%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin: auto;
-     z-index: 10;
-     bottom: 10%;
-     right: -20%;
-     mix-blend-mode: difference;
-    
-}
-.text,.texts,.textss,.textsss{
-     mix-blend-mode: difference;
-     position: relative;
-     margin: auto;
-     width: 100%;
-     height: 100%;
-     top: 0;
-     right: 0;
-     clip-path: none;
-}
-.text span,.texts span,.textss span,.textsss span{
-     mix-blend-mode: difference;
-     position: absolute;
-     top: 0;
-     left: 50%;
-     font-size: 1.8em;
-     transform-origin:0 130px ;
-     font-family: 'VT323', monospace;
-     color: #fff;
-     clip-path: none;
-}
-
 /* pop-up berada penjelasan */
 .popupContainer {
      position: fixed;
@@ -622,6 +596,9 @@ li a:hover{
 .jabatan-teks p{
      color: #fff;  
 }
+.tr{
+     transform: translateX(80px);
+}
 .akhir{
      margin: auto;
      width: 90%;
@@ -636,7 +613,8 @@ li a:hover{
 /*untuk contact*/
 .contact{
      width: 100%;
-     height: 100vh;
+     height:120vh ;
+     display: block;
      position: relative;     
 }
 .c-marquee{
@@ -661,10 +639,11 @@ marquee span{
 }
 .form{
      position: absolute;
-     width: 60%;
-     height: auto;
+     width: 100%;
+     height: 50vh;
      top: 25%;
-     left: 5%;   
+     margin-left: auto;
+     margin-right: auto;
 }
 .form h1{
      color: white;
@@ -672,7 +651,7 @@ marquee span{
 }
 .stroke{
      color:transparent;
-     -webkit-text-stroke: 1px white;
+     -webkit-text-stroke: 0.6px white;
 }
 
 .formm{
@@ -699,7 +678,7 @@ input{
      bottom: 0;
      background-color: rgb(186, 0, 0);
      width: 90%;
-     height: 5px;
+     height: 1px;
      display: flex;
 }
 
@@ -729,6 +708,7 @@ input:focus{
      padding: 0;
 }
 input:valid ~.name,input:focus ~.name{
+     color: orangered;
      font-size: 0.8em;
      bottom: 55px;
 
@@ -760,6 +740,67 @@ input:valid ~.name,input:focus ~.name{
 }
 .btn:hover .bg-cp{
      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+.sosmed{
+     left: 0;
+     bottom: 3vh;
+     width: 100%;
+     height: 5vh;
+     display: flex;
+     position: absolute;
+}
+.sosmed-a{
+     margin: auto;
+     font-size:1em;
+     text-align: left;
+     color: #ebebeb;
+     text-decoration: none;
+}
+.sosmed-a::before{
+     content: "";
+     display: block;
+     width: 0;
+     transform: translateY(46px);
+     height: 3px;
+     background-color: orangered;
+     transition: 0.5s all ease-in-out;
+}
+.sosmed-a:hover:before{
+     width: 100%;
+}
+.inst{
+     position: absolute;
+     bottom: 8vh;
+     left: 5%;
+     width: 80%;
+     height: 20vh;
+     display: block;
+}
+.inst a,.inst p{
+     margin-left: 10px;
+     background: linear-gradient(to right, purple, orangered);
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
+     text-decoration: none;
+     font-size: 4em;
+}
+.inst p{
+     font-size: 2.5em;
+     color: whitesmoke;
+}
+.rifqi{
+     display: flex;
+     position: absolute;
+     width: 100%;
+     height: 3vh;
+     bottom: 0;
+     left: 0;
+}
+.rifqi p{
+     margin: auto;
+     color: #919191;
+     font-size: 0.7em;
 }
 
 /* untuk responsive */
@@ -886,21 +927,11 @@ input:valid ~.name,input:focus ~.name{
      .textanim_title{
           font-size: 1.2em;
      }
-     .circle{
-          width: 210px;
-          height: 210px;
-          bottom: -15%;
-          left: -20%;
-          display: flex;
-        
-     }
-     .text span,.texts span,.textss span,.textsss span{
-          font-size: 1.2em;
-          transform-origin:0 105px ;
-          margin: auto;
+     .t-img{
+          height: max-content;
+          font-size: 1em;
      }
      .form{
-          left: 10px;
           width: 90%;
      }
      input{
@@ -916,6 +947,28 @@ input:valid ~.name,input:focus ~.name{
      .color,.line-form{
           height: 2px;
           width: 100%;
+     }
+     .tr{
+          transform: translateX(10px);
+     }
+     .jabatan-teks h1{
+          font-size: 1.5em;
+     }
+     .sosmed{
+        flex-wrap: wrap;
+        font-size: 1em;
+     }
+     .sosmed-a{
+          font-size:0.6em;
+     }
+     .inst{
+          height: auto;
+     }
+     .inst p{
+          font-size: 1.3em;
+     }
+     .inst a{
+          font-size: 1.6em;
      }
      /* untuk pop up */
      .popup-img{
@@ -945,14 +998,6 @@ input:valid ~.name,input:focus ~.name{
      }
 }
 @media  screen and (max-width:375px){
-     .circle{
-          width: 200px;
-          height: 200px;
-     }
-     .text span,.texts span,.textss span,.textsss span{
-          font-size: 1.2em;
-          transform-origin:0 100px ;
-     }
      .card-img{
           width: 300px;
           height: 400px;
@@ -973,16 +1018,6 @@ input:valid ~.name,input:focus ~.name{
     }
 }
 @media screen and (max-width:320px){
-     .circle{
-          width: 190px;
-          height: 190px;
-          bottom: -25%;
-
-     }
-     .text span,.texts span,.textss span,.textsss span{
-          font-size: 1.2em;
-          transform-origin:0 85px ;
-     }
      .title{
           font-size: 1.2em;
      }
@@ -993,5 +1028,11 @@ input:valid ~.name,input:focus ~.name{
      .card-img{
           width: 250px;
           height: 350px;
+     }
+     .inst p{
+          font-size: 1.1em;
+     }
+     .inst a{
+          font-size: 1.4em;
      }
 }
