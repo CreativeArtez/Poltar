@@ -41,7 +41,7 @@ body{
      height: 100%;
      object-fit: cover;
      z-index: -1;
-     background: url(./noise.gif);
+     background: url(noise.gif);
      opacity: .05;
      position: fixed;
 }
